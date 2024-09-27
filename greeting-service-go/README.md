@@ -1,4 +1,4 @@
-# Go Greeter Service
+# Go Greeting Service
 
 ## Repository File Structure
 
