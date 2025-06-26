@@ -67,5 +67,11 @@ func greet(w http.ResponseWriter, r *http.Request) {
 	if name == "" {
 		name = "Stranger"
 	}
-	fmt.Fprintf(w, "Hello, %s!\n", name)
+
+	secret := os.Getenv("MY_SECRET_TOKEN")
+	if secret == "" {
+		secret = "Not Set"
+	}
+
+	fmt.Fprintf(w, "Hello, %s!\nSecret: %s\n", name, secret)
 }
